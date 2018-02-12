@@ -1,0 +1,15 @@
+<h1>COACHCOACHCOACH</h1>
+
+<h2>You:</h2>
+<p><%= @question %></p>
+
+<h2>Coach:</h2>
+<% if @question == "I am going to work out!" %>
+  <p>Great!</p>
+<% elsif @question[-1] == "?"%>
+  <p>Silly question, get dressed and go to work!</p>
+<% else %>
+  <p>I don't care, get dressed and go to work!</p>
+<% end %>
+
+<%= link_to "Ask another question", "/ask" %>
